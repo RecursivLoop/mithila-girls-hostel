@@ -1,4 +1,4 @@
-# Mithila Girls Hostel — Website
+# Majanki Girls Hostel — Website
 
 Home away from home. Girls' hostel in Kankarbagh, Patna.
 

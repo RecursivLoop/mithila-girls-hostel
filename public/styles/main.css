@@ -239,6 +239,26 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.35rem); font-weight: 600; }
 .amenity-icon { font-size: 1.8rem; margin-bottom: 8px; }
 .amenity-label { font-weight: 600; font-size: .95rem; }
 
+/* Nearby / Location */
+.nearby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.nearby-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--brand);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s, box-shadow .2s;
+}
+.nearby-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.nearby-card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--brand-dark); }
+.nearby-card p { color: var(--ink-soft); font-size: .93rem; line-height: 1.55; }
+.nearby-icon { font-size: 1.7rem; margin-bottom: 8px; }
+
 /* Safety strip */
 .safety {
   background: linear-gradient(135deg, var(--brand-dark), var(--brand));

@@ -53,7 +53,7 @@ export default async function handler(req, res) {
   if (resend) {
     resend.emails
       .send({
-        from: "Mithila Girls Hostel <onboarding@resend.dev>",
+        from: "Majanki Girls Hostel <onboarding@resend.dev>",
         to: NOTIFY_EMAIL,
         subject: `New enquiry: ${clean.name} (${clean.room_type})`,
         text:

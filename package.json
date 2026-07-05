@@ -1,8 +1,8 @@
 {
-  "name": "mithila-girls-hostel",
+  "name": "majanki-girls-hostel",
   "version": "1.0.0",
   "private": true,
-  "description": "Mithila Girls Hostel, Patna — brochure site with enquiry form.",
+  "description": "Majanki Girls Hostel, Patna — brochure site with enquiry form.",
   "scripts": {
     "dev": "vercel dev",
     "start": "npx serve public -l 3000",

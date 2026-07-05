@@ -1,4 +1,4 @@
--- Mithila Girls Hostel — Supabase schema
+-- Majanki Girls Hostel — Supabase schema
 -- Run this once in Supabase → SQL Editor → New Query → Paste → Run
 
 create table if not exists public.enquiries (

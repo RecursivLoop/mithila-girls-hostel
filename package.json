@@ -1,0 +1,15 @@
+{
+  "name": "mithila-girls-hostel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mithila Girls Hostel, Patna — brochure site with enquiry form.",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "npx serve public -l 3000",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "resend": "^4.0.0"
+  }
+}

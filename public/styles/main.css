@@ -140,7 +140,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.35rem); font-weight: 600; }
   position: absolute; inset: 0;
   background:
     linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.7)),
-    url("/photos/01-exterior-gate.jpg") center/cover no-repeat;
+    url("/photos/hero-exterior.jpg") center/cover no-repeat;
   z-index: -1;
 }
 .hero-inner { padding: 40px 20px; max-width: 800px; }
@@ -246,6 +246,46 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.35rem); font-weight: 600; }
 .amenity:hover { border-color: var(--brand); }
 .amenity-icon { font-size: 1.8rem; margin-bottom: 8px; }
 .amenity-label { font-weight: 600; font-size: .95rem; }
+
+/* Meal plan */
+.meal-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 820px) { .meal-wrap { grid-template-columns: 1fr; } }
+.meal-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 6px solid #fff;
+  outline: 1px solid var(--line);
+}
+.meal-copy h3 { margin-bottom: 16px; color: var(--brand-dark); }
+.meal-times {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+.meal-times li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: .98rem;
+}
+.meal-times li:last-child { border-bottom: 0; }
+.meal-times strong {
+  display: inline-block;
+  min-width: 120px;
+  color: var(--brand);
+  font-weight: 700;
+}
+.meal-note {
+  color: var(--ink-soft);
+  font-size: .9rem;
+  font-style: italic;
+}
 
 /* Nearby / Location */
 .nearby-grid {

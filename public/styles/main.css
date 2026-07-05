@@ -113,10 +113,15 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, .82);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(255, 255, 255, .95);
   border-bottom: 1px solid rgba(235, 230, 224, .6);
+}
+@media (min-width: 860px) {
+  .site-header {
+    background: rgba(255, 255, 255, .82);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
 }
 .nav {
   display: flex;
@@ -233,25 +238,42 @@ h3 {
 .hero::before {
   content: "";
   position: absolute; inset: 0;
-  background:
-    linear-gradient(180deg, rgba(28,25,23,.35) 0%, rgba(28,25,23,.55) 60%, rgba(28,25,23,.75) 100%),
-    url("/photos/hero-exterior.jpg") center/cover no-repeat;
-  z-index: -1;
-  transform: scale(1.05);
-  animation: heroZoom 20s ease-out infinite alternate;
+  background: linear-gradient(180deg, rgba(28,25,23,.35) 0%, rgba(28,25,23,.55) 60%, rgba(28,25,23,.75) 100%);
+  z-index: 1;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.hero-inner,
+.hero-scroll { position: relative; z-index: 2; }
+@media (min-width: 860px) and (prefers-reduced-motion: no-preference) {
+  .hero-bg {
+    transform: scale(1.05);
+    animation: heroZoom 20s ease-out infinite alternate;
+  }
 }
 @keyframes heroZoom {
   from { transform: scale(1.05); }
   to   { transform: scale(1.12); }
 }
-.hero-inner {
-  padding: 40px 24px;
-  max-width: 860px;
-  animation: heroFade 1.2s ease-out;
+@keyframes heroZoom {
+  from { transform: scale(1.05); }
+  to   { transform: scale(1.12); }
 }
 @keyframes heroFade {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+.hero-inner {
+  padding: 40px 24px;
+  max-width: 860px;
+  animation: heroFade 1.2s ease-out;
 }
 .hero h1 {
   color: #fff;
@@ -896,6 +918,18 @@ h3 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Reduce heavy effects on mobile for performance */
+@media (max-width: 860px) {
+  .gallery-grid img { transition: none; }
+  .gallery-grid img:hover { transform: none; box-shadow: var(--shadow-sm); }
+  .room-card { transition: box-shadow .3s; }
+  .room-card:hover { transform: none; }
+  .room-card:hover .room-img { transform: none; }
+  .wa-float { animation: none; }
+  .hero-scroll { display: none; }
+  .safety::before { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
